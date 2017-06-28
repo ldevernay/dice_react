@@ -20,7 +20,7 @@ class AddDiceButton extends Component {
     const {count} = this.state
 
     return (
-          <div className="col-sm-1">
+          <div className="col-sm-3">
             {count > 0 && (<div className="card small">
               <div className="section darker">
                 <button onClick={this.handleAdd}>
