@@ -7,8 +7,14 @@ class RowCpt extends Component {
   render() {
 
     return (
-    <AddDiceButton>
-    </AddDiceButton>
+      <div className="container">
+        <div className="row">
+          <AddDiceButton type="number">
+          </AddDiceButton>
+          <AddDiceButton type="face">
+          </AddDiceButton>
+        </div>
+      </div>
     )
   }
 }

@@ -1,21 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import RowCpt from './RowCpt';
 
+var shortid = require('shortid');
+
 class App extends Component {
-  state = {count: 0}
-
-  handlePress = () => {
-    const {count} = this.state
-
-    this.setState({count: count + 1})
+  state = {
+    id:shortid.generate()
   }
 
   render() {
-
-    const {count} = this.state
-
     return (
       <RowCpt>
       </RowCpt>
