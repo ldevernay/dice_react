@@ -18,7 +18,6 @@ class App extends Component {
 
     return (
       <RowCpt>
-        Click HERE to increment: {count}
       </RowCpt>
     )
   }

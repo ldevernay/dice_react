@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class AddDiceButton extends Component {
 
-  state = {count: 0}
+  state = {count: 6}
 
   handleAdd = () => {
     const {count} = this.state
@@ -20,9 +20,19 @@ class AddDiceButton extends Component {
     const {count} = this.state
 
     return (
-      <button className="btn btn-primary" type="button">
-      <span className="badge" onClick={this.handleRemove}>-</span> {count} <span className="badge" onClick={this.handleAdd}>+</span>
-      </button>
+      <div className="col-sm-2">
+        {count > 0 && (<div className="card small">
+          <div className="section darker">
+            <button onClick={this.handleAdd}>
+              +
+            </button>
+            <p>D{count}</p>
+            <button onClick={this.handleRemove}>
+              -
+            </button>
+          </div>
+        </div>)}
+      </div>
     )
   }
 }
