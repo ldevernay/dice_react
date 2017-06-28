@@ -9,10 +9,8 @@ class RowCpt extends Component {
     return (
       <div className="container">
         <div className="row">
-          <AddDiceButton type="number">
-          </AddDiceButton>
-          <AddDiceButton type="face">
-          </AddDiceButton>
+          <AddDiceButton type="number"/>
+          <AddDiceButton type="face"/>
         </div>
       </div>
     )

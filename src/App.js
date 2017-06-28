@@ -5,14 +5,29 @@ import RowCpt from './RowCpt';
 var shortid = require('shortid');
 
 class App extends Component {
-  state = {
-    id:shortid.generate()
+  constructor() {
+    super();
+    this.state = {
+      rows: [
+        {key: shortid.generate()}
+      ]
+    };
   }
+  // state = {
+  //   // id:shortid.generate()
+  //   rows: [
+  //     {key: shortid.generate()}
+  //   ]
+  // }
 
+  renderRow(row){
+    return (<RowCpt key={row.key}/>)
+  }
   render() {
     return (
-      <RowCpt>
-      </RowCpt>
+      <div>
+        {this.state.rows.map(row=>this.renderRow(row))}
+      </div>
     )
   }
 }
